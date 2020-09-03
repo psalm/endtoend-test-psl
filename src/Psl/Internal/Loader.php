@@ -340,6 +340,11 @@ final class Loader
         'Psl\Xml\Internal\issue_collection_from_xml_errors',
         'Psl\Xml\Internal\issue_from_xml_error',
         'Psl\Xml\Internal\issue_level_from_xml_error',
+        'Psl\Internal\suppress',
+        'Psl\IO\Internal\open',
+        'Psl\IO\input',
+        'Psl\IO\output',
+        'Psl\IO\error',
     ];
 
     public const INTERFACES = [
@@ -402,6 +407,36 @@ final class Loader
         'Psl\Xml\Issue\IssueCollection',
         'Psl\Xml\Issue\Level',
         'Psl\Xml\Exception\RuntimeException',
+        'Psl\Json\Exception\JsonDecodeException',
+        'Psl\Json\Exception\JsonEncodeException',
+        'Psl\IO\Handle',
+        'Psl\IO\SeekHandle',
+        'Psl\IO\CloseHandle',
+        'Psl\IO\ReadHandle',
+        'Psl\IO\WriteHandle',
+        'Psl\IO\SeekReadHandle',
+        'Psl\IO\CloseSeekReadHandle',
+        'Psl\IO\CloseWriteHandle',
+        'Psl\IO\CloseSeekWriteHandle',
+        'Psl\IO\ReadWriteHandle',
+        'Psl\IO\CloseReadWriteHandle',
+        'Psl\IO\SeekReadWriteHandle',
+        'Psl\IO\CloseSeekReadWriteHandle',
+    ];
+
+    public const TRAITS = [
+        'Psl\Type\Internal\TypeTraceTrait',
+    ];
+
+    public const CLASSES = [
+        'Psl\Exception\InvariantViolationException',
+        'Psl\Iter\Iterator',
+        'Psl\Collection\Vector',
+        'Psl\Collection\MutableVector',
+        'Psl\Collection\Map',
+        'Psl\Collection\MutableMap',
+        'Psl\Asio\WrappedException',
+        'Psl\Asio\WrappedResult',
     ];
 
     private const TYPE_CONSTANTS = 1;
