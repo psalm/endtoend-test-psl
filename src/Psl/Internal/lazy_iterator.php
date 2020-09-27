@@ -13,6 +13,8 @@ use Psl\Iter;
  * @psalm-param (callable(): \Generator<Tk, Tv, mixed, mixed>) $fun
  *
  * @psalm-return Iter\Iterator<Tk, Tv>
+ *
+ * @internal
  */
 function lazy_iterator(callable $fun): Iter\Iterator
 {

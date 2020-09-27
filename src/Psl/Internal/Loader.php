@@ -323,6 +323,10 @@ final class Loader
         'Psl\Password\hash',
         'Psl\Password\needs_rehash',
         'Psl\Password\verify',
+        'Psl\Encoding\Base64\encode',
+        'Psl\Encoding\Base64\decode',
+        'Psl\Encoding\Hex\encode',
+        'Psl\Encoding\Hex\decode',
     ];
 
     public const INTERFACES = [
@@ -340,6 +344,7 @@ final class Loader
         'Psl\Observer\SubjectInterface',
         'Psl\Observer\ObserverInterface',
         'Psl\Result\ResultInterface',
+        'Psl\Encoding\Exception\ExceptionInterface',
     ];
 
     public const TRAITS = [
@@ -379,6 +384,8 @@ final class Loader
         'Psl\Type\Type',
         'Psl\Json\Exception\DecodeException',
         'Psl\Json\Exception\EncodeException',
+        'Psl\Encoding\Exception\IncorrectPaddingException',
+        'Psl\Encoding\Exception\RangeException',
     ];
 
     private const TYPE_CONSTANTS = 1;
