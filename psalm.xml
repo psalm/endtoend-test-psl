@@ -22,6 +22,7 @@
             <file name="src/bootstrap.php"/>
             <file name="src/preload.php"/>
             <file name="src/Psl/Internal/Loader.php"/>
+            <directory name="src/Psl/Str/Grapheme"/>
         </ignoreFiles>
     </projectFiles>
 
