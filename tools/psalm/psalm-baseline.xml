@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="dev-master@b4fab67f3b98be02c9f7e18cf9912c4d941f5a59">
+  <file src="src/Psl/Filesystem/create_temporary_file.php">
+    <MixedArgument occurrences="2">
+      <code>SEPARATOR</code>
+      <code>SEPARATOR</code>
+    </MixedArgument>
+  </file>
+  <file src="src/Psl/Hash/Context.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>hash_update</code>
+    </UnusedFunctionCall>
+  </file>
+  <file src="src/Psl/Math/base_convert.php">
+    <UnnecessaryVarAnnotation occurrences="2">
+      <code>numeric-string</code>
+      <code>string</code>
+    </UnnecessaryVarAnnotation>
+  </file>
+  <file src="src/Psl/Result/Success.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>Psl\invariant_violation</code>
+    </UnusedFunctionCall>
+  </file>
+  <file src="src/Psl/Str/Byte/contains.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>Psl\Internal\validate_offset</code>
+    </UnusedFunctionCall>
+  </file>
+  <file src="src/Psl/Str/Byte/contains_ci.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>Psl\Internal\validate_offset</code>
+    </UnusedFunctionCall>
+  </file>
+  <file src="src/Psl/Str/Grapheme/contains.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>Psl\Internal\validate_offset</code>
+    </UnusedFunctionCall>
+  </file>
+  <file src="src/Psl/Str/Grapheme/contains_ci.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>Psl\Internal\validate_offset</code>
+    </UnusedFunctionCall>
+  </file>
+  <file src="src/Psl/Str/contains.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>Psl\Internal\validate_offset</code>
+    </UnusedFunctionCall>
+  </file>
+  <file src="src/Psl/Str/contains_ci.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>Psl\Internal\validate_offset</code>
+    </UnusedFunctionCall>
+  </file>
+  <file src="src/Psl/invariant.php">
+    <UnusedFunctionCall occurrences="1">
+      <code>invariant_violation</code>
+    </UnusedFunctionCall>
+  </file>
+</files>
