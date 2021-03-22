@@ -9,6 +9,7 @@
             <file name="../../src/preload.php" />
             <file name="../../src/Psl/Internal/Loader.php" />
             <file name="../../src/Psl/Filesystem/create_temporary_file.php" />
+            <directory name="../../src/Psl/Str/Grapheme" />
         </ignoreFiles>
     </projectFiles>
 
