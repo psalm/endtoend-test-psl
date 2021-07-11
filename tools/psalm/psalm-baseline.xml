@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="dev-master@ec7aaa4a473f998749432e524aa4439001e264de">
+  <file src="../../src/Psl/Regex/replace_with.php">
+    <MixedArgumentTypeCoercion occurrences="1">
+      <code>$callback</code>
+    </MixedArgumentTypeCoercion>
+  </file>
   <file src="../../src/Psl/Str/Byte/words.php">
     <UnnecessaryVarAnnotation occurrences="2">
       <code>array&lt;int, string&gt;</code>
