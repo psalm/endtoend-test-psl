@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="dev-master@ec7aaa4a473f998749432e524aa4439001e264de">
+<files psalm-version="dev-master@2fef68c19f95b47e85ee80627fbb27f98f5a3d83">
+  <file src="../../src/Psl/Math/mean.php">
+    <InvalidOperand occurrences="2">
+      <code>$mean += $number / $count</code>
+      <code>$number / $count</code>
+    </InvalidOperand>
+  </file>
+  <file src="../../src/Psl/Math/sum_floats.php">
+    <InvalidOperand occurrences="1">
+      <code>$result += $number</code>
+    </InvalidOperand>
+  </file>
   <file src="../../src/Psl/Regex/replace_with.php">
     <MixedArgumentTypeCoercion occurrences="1">
       <code>$callback</code>
