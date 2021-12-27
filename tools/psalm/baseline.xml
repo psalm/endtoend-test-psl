@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.9.1@7e137f5b95f7394607f5d0631172ff4c2da46781">
+<files psalm-version="dev-master@1c078136273a669d52d234251ddbae4cd0507d38">
+  <file src="../../src/Psl/Iter/product.php">
+    <UnnecessaryVarAnnotation occurrences="1">
+      <code>list&lt;Iterator&lt;Tk, Tv&gt;&gt;</code>
+    </UnnecessaryVarAnnotation>
+  </file>
   <file src="../../src/Psl/Vec/range.php">
     <MixedOperand occurrences="2">
       <code>$step</code>
