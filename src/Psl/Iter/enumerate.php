@@ -15,7 +15,7 @@ use Psl\Vec;
  *
  * @param iterable<Tk, Tv> $iterable
  *
- * @return Iterator<int, array{0: Tk, 1: Tv}>
+ * @return Iterator<int, strict-array{0: Tk, 1: Tv}>
  *
  * @deprecated use `Vec\enumerate` instead.
  * @see Vec\enumerate()
