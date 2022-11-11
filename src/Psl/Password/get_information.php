@@ -16,7 +16,7 @@ use function password_get_info;
  *
  * @return array{
  *                algorithm: string,
- *                options: array{?cost: int, ?memory_cost: int, ?time_cost: int, ?threads: int}
+ *                options: array{cost?: int, memory_cost?: int, time_cost?: int, threads?: int}
  *                }
  *
  * @pure
