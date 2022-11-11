@@ -14,9 +14,9 @@ use function password_get_info;
  * When passed in a valid hash created by an algorithm supported by `Psl\Password\hash()`,
  * this function will return an array of information about that hash.
  *
- * @return strict-array{
+ * @return array{
  *                algorithm: string,
- *                options: strict-array{cost: int}|strict-array{memory_cost: int, time_cost: int, threads: int}
+ *                options: array{?cost: int, ?memory_cost: int, ?time_cost: int, ?threads: int}
  *                }
  *
  * @pure
