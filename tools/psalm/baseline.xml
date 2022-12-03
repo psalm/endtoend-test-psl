@@ -1,19 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="dev-master@e517295f7e7b04bd1d184c17ce52735127bc09ef">
+<files psalm-version="dev-master@2b0e979ee9434afdeb9dd59a3219bf4029c62dc8">
   <file src="../../src/Psl/Iter/Iterator.php">
     <DocblockTypeContradiction occurrences="1">
       <code>$iterable instanceof Generator</code>
     </DocblockTypeContradiction>
   </file>
   <file src="../../src/Psl/Iter/product.php">
+    <TypeDoesNotContainType occurrences="1">
+      <code>0 === $numIterators</code>
+    </TypeDoesNotContainType>
     <UnnecessaryVarAnnotation occurrences="1">
       <code>list&lt;Iterator&lt;Tk, Tv&gt;&gt;</code>
     </UnnecessaryVarAnnotation>
   </file>
+  <file src="../../src/Psl/Iter/reverse.php">
+    <InvalidArrayOffset occurrences="1">
+      <code>$values[$i]</code>
+    </InvalidArrayOffset>
+    <TypeDoesNotContainType occurrences="1">
+      <code>0 === $size</code>
+    </TypeDoesNotContainType>
+  </file>
+  <file src="../../src/Psl/Math/median.php">
+    <TypeDoesNotContainType occurrences="1">
+      <code>0 === $count</code>
+    </TypeDoesNotContainType>
+  </file>
   <file src="../../src/Psl/Vec/range.php">
+    <LessSpecificReturnStatement occurrences="2">
+      <code>$result</code>
+      <code>$result</code>
+    </LessSpecificReturnStatement>
     <MixedOperand occurrences="2">
       <code>$step</code>
       <code>$step</code>
     </MixedOperand>
+    <MoreSpecificReturnType occurrences="1">
+      <code>list&lt;T&gt;</code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="../../src/Psl/Vec/reverse.php">
+    <InvalidArrayOffset occurrences="1">
+      <code>$values[$i]</code>
+    </InvalidArrayOffset>
+    <MixedAssignment occurrences="1">
+      <code>$result[]</code>
+    </MixedAssignment>
+    <TypeDoesNotContainType occurrences="1">
+      <code>0 === $size</code>
+    </TypeDoesNotContainType>
   </file>
 </files>
