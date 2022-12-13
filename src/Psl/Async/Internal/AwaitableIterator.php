@@ -36,7 +36,7 @@ final class AwaitableIterator
     private readonly AwaitableIteratorQueue $queue;
 
     /**
-     * @var null|Awaitable<void>|Awaitable<null>|Awaitable<array{Tk, Awaitable<Tv>}>
+     * @var null|Awaitable<void>|Awaitable<null>|Awaitable<list{Tk, Awaitable<Tv>}>
      */
     private ?Awaitable $complete = null;
 
@@ -124,7 +124,7 @@ final class AwaitableIterator
     /**
      * @throws Psl\Exception\InvariantViolationException If {@see consume()} is called concurrently.
      *
-     * @return null|array{Tk, Awaitable<Tv>}
+     * @return null|list{Tk, Awaitable<Tv>}
      */
     public function consume(): ?array
     {
@@ -139,11 +139,11 @@ final class AwaitableIterator
 
             $this->queue->suspension = EventLoop::getSuspension();
 
-            /** @var null|array{0: Tk, 1: Awaitable<Tv>} */
+            /** @var null|list{Tk, Awaitable<Tv>} */
             return $this->queue->suspension->suspend();
         }
 
-        /** @var null|array{0: Tk, 1: Awaitable<Tv>} */
+        /** @var null|list{Tk, Awaitable<Tv>} */
         return array_shift($this->queue->items);
     }
 
