@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="dev-master@6970409924e77359b6c8a6e94529a10f1799b4bd">
+<files psalm-version="dev-master@6eb37b9dc2321e4eaade9d3d2dca1aff6f2c0a8f">
+  <file src="../src/Psl/Class/has_constant.php">
+    <ArgumentTypeCoercion occurrences="1">
+      <code>$constant_name</code>
+    </ArgumentTypeCoercion>
+  </file>
   <file src="../src/Psl/Collection/MutableVector.php">
     <InvalidReturnStatement occurrences="2">
       <code>Iter\Iterator::create($this-&gt;elements)</code>
