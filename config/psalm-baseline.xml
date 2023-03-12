@@ -1,72 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="dev-master@6eb37b9dc2321e4eaade9d3d2dca1aff6f2c0a8f">
-  <file src="../src/Psl/Class/has_constant.php">
-    <ArgumentTypeCoercion occurrences="1">
-      <code>$constant_name</code>
-    </ArgumentTypeCoercion>
-  </file>
+<files psalm-version="dev-master@47f792ea120cbbc975deec2d2ea166257e058f94">
   <file src="../src/Psl/Collection/MutableVector.php">
-    <InvalidReturnStatement occurrences="2">
-      <code>Iter\Iterator::create($this-&gt;elements)</code>
-      <code>MutableVector::fromArray(array_keys($this-&gt;elements))</code>
+    <InvalidReturnStatement>
+      <code><![CDATA[Iter\Iterator::create($this->elements)]]></code>
+      <code><![CDATA[MutableVector::fromArray(array_keys($this->elements))]]></code>
     </InvalidReturnStatement>
-    <InvalidReturnType occurrences="2">
-      <code>Iter\Iterator&lt;int, T&gt;</code>
-      <code>MutableVector&lt;int&gt;</code>
+    <InvalidReturnType>
+      <code><![CDATA[Iter\Iterator<int, T>]]></code>
+      <code><![CDATA[MutableVector<int>]]></code>
     </InvalidReturnType>
   </file>
   <file src="../src/Psl/Collection/Vector.php">
-    <InvalidReturnStatement occurrences="2">
-      <code>Iter\Iterator::create($this-&gt;elements)</code>
-      <code>self::fromArray(array_keys($this-&gt;elements))</code>
+    <InvalidReturnStatement>
+      <code><![CDATA[Iter\Iterator::create($this->elements)]]></code>
+      <code><![CDATA[self::fromArray(array_keys($this->elements))]]></code>
     </InvalidReturnStatement>
-    <InvalidReturnType occurrences="2">
-      <code>Iter\Iterator&lt;int, T&gt;</code>
-      <code>Vector&lt;int&gt;</code>
+    <InvalidReturnType>
+      <code><![CDATA[Iter\Iterator<int, T>]]></code>
+      <code><![CDATA[Vector<int>]]></code>
     </InvalidReturnType>
   </file>
   <file src="../src/Psl/Filesystem/create_temporary_file.php">
-    <ArgumentTypeCoercion occurrences="1">
+    <ArgumentTypeCoercion>
       <code>$filename</code>
     </ArgumentTypeCoercion>
-    <LessSpecificReturnStatement occurrences="1">
+    <LessSpecificReturnStatement>
       <code>$filename</code>
     </LessSpecificReturnStatement>
-    <MixedArgument occurrences="1">
+    <MixedArgument>
       <code>$separator</code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
+    <MixedAssignment>
       <code>$separator</code>
     </MixedAssignment>
-    <MixedOperand occurrences="1">
+    <MixedOperand>
       <code>$separator</code>
     </MixedOperand>
-    <MoreSpecificReturnType occurrences="1">
+    <MoreSpecificReturnType>
       <code>non-empty-string</code>
     </MoreSpecificReturnType>
   </file>
   <file src="../src/Psl/Iter/random.php">
-    <TypeDoesNotContainType occurrences="1">
+    <TypeDoesNotContainType>
       <code>$size === 0</code>
     </TypeDoesNotContainType>
   </file>
-  <file src="../src/Psl/Vec/range.php">
-    <LessSpecificReturnStatement occurrences="2">
-      <code>$result</code>
-      <code>$result</code>
-    </LessSpecificReturnStatement>
-    <MoreSpecificReturnType occurrences="1">
-      <code>list&lt;T&gt;</code>
-    </MoreSpecificReturnType>
+  <file src="../src/Psl/Network/Internal/get_peer_name.php">
+    <UnnecessaryVarAnnotation>
+      <code>string|false</code>
+    </UnnecessaryVarAnnotation>
+  </file>
+  <file src="../src/Psl/Network/Internal/get_sock_name.php">
+    <UnnecessaryVarAnnotation>
+      <code>string|false</code>
+    </UnnecessaryVarAnnotation>
   </file>
   <file src="../src/Psl/Vec/reverse.php">
-    <InvalidArrayOffset occurrences="1">
-      <code>$values[$i]</code>
-    </InvalidArrayOffset>
-    <MixedAssignment occurrences="1">
-      <code>$result[]</code>
-    </MixedAssignment>
-    <TypeDoesNotContainType occurrences="1">
+    <TypeDoesNotContainType>
       <code>0 === $size</code>
     </TypeDoesNotContainType>
   </file>
