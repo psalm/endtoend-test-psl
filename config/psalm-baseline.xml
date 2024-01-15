@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.x-dev@5acde045f126440ded206b406cf37b649ede84fc">
+<files psalm-version="dev-master@d12cdf6d429cb32e6934c61bf126329d27e56828">
+  <file src="../src/Psl/Async/KeyedSemaphore.php">
+    <PossiblyNullReference>
+      <code>resume</code>
+    </PossiblyNullReference>
+  </file>
+  <file src="../src/Psl/Async/Scheduler.php">
+    <MissingThrowsDocblock>
+      <code>run</code>
+    </MissingThrowsDocblock>
+  </file>
   <file src="../src/Psl/Collection/MutableVector.php">
     <InvalidReturnStatement>
       <code><![CDATA[Iter\Iterator::create($this->elements)]]></code>
@@ -20,61 +30,77 @@
       <code><![CDATA[Vector<int>]]></code>
     </InvalidReturnType>
   </file>
-  <file src="../src/Psl/Filesystem/create_temporary_file.php">
-    <ArgumentTypeCoercion>
-      <code>$filename</code>
-    </ArgumentTypeCoercion>
-    <LessSpecificReturnStatement>
-      <code>$filename</code>
-    </LessSpecificReturnStatement>
-    <MixedArgument>
-      <code>$separator</code>
-    </MixedArgument>
-    <MixedAssignment>
-      <code>$separator</code>
-    </MixedAssignment>
-    <MixedOperand>
-      <code>$separator</code>
-    </MixedOperand>
-    <MoreSpecificReturnType>
-      <code>non-empty-string</code>
-    </MoreSpecificReturnType>
-  </file>
-  <file src="../src/Psl/Internal/box.php">
-    <UnnecessaryVarAnnotation>
-      <code>string|null</code>
-    </UnnecessaryVarAnnotation>
+  <file src="../src/Psl/Encoding/Hex/decode.php">
+    <FalsableReturnStatement>
+      <code>hex2bin($hexadecimal)</code>
+    </FalsableReturnStatement>
+    <InvalidFalsableReturnType>
+      <code>string</code>
+    </InvalidFalsableReturnType>
   </file>
   <file src="../src/Psl/Iter/random.php">
     <TypeDoesNotContainType>
       <code>$size === 0</code>
     </TypeDoesNotContainType>
   </file>
-  <file src="../src/Psl/Network/Internal/get_peer_name.php">
-    <UnnecessaryVarAnnotation>
-      <code>string|false</code>
-    </UnnecessaryVarAnnotation>
-  </file>
-  <file src="../src/Psl/Network/Internal/get_sock_name.php">
-    <UnnecessaryVarAnnotation>
-      <code>string|false</code>
-    </UnnecessaryVarAnnotation>
-  </file>
-  <file src="../src/Psl/Network/Internal/socket_connect.php">
-    <PossiblyInvalidArgument>
-      <code>$socket</code>
-    </PossiblyInvalidArgument>
-    <UnnecessaryVarAnnotation>
+  <file src="../src/Psl/Json/encode.php">
+    <FalsableReturnStatement>
+      <code>$json</code>
+    </FalsableReturnStatement>
+    <InvalidFalsableReturnType>
       <code>string</code>
-    </UnnecessaryVarAnnotation>
+    </InvalidFalsableReturnType>
   </file>
-  <file src="../src/Psl/Shell/execute.php">
-    <UnnecessaryVarAnnotation>
-      <code><![CDATA[array<string, string>]]></code>
-      <code><![CDATA[array<string, string>]]></code>
-      <code><![CDATA[array<string, string>]]></code>
+  <file src="../src/Psl/Shell/stream_unpack.php">
+    <PossiblyInvalidArrayAccess>
+      <code><![CDATA[$headers['size']]]></code>
+      <code><![CDATA[$headers['type']]]></code>
+    </PossiblyInvalidArrayAccess>
+  </file>
+  <file src="../src/Psl/Str/convert_encoding.php">
+    <FalsableReturnStatement>
+      <code><![CDATA[mb_convert_encoding($string, $to_encoding->value, $from_encoding->value)]]></code>
+    </FalsableReturnStatement>
+    <InvalidFalsableReturnType>
+      <code>string</code>
+    </InvalidFalsableReturnType>
+  </file>
+  <file src="../src/Psl/Str/ord.php">
+    <FalsableReturnStatement>
+      <code><![CDATA[mb_ord($character, $encoding->value)]]></code>
+    </FalsableReturnStatement>
+    <InvalidFalsableReturnType>
       <code>int</code>
-    </UnnecessaryVarAnnotation>
+    </InvalidFalsableReturnType>
+  </file>
+  <file src="../src/Psl/Str/replace_ci.php">
+    <PossiblyFalseArgument>
+      <code><![CDATA[preg_split('{' . preg_quote($needle, '/') . '}iu', $haystack)]]></code>
+    </PossiblyFalseArgument>
+  </file>
+  <file src="../src/Psl/Str/trim.php">
+    <InvalidNullableReturnType>
+      <code>string</code>
+    </InvalidNullableReturnType>
+    <NullableReturnStatement>
+      <code><![CDATA[preg_replace("{^[{$char_mask}]++|[{$char_mask}]++$}uD", '', $string)]]></code>
+    </NullableReturnStatement>
+  </file>
+  <file src="../src/Psl/Str/trim_left.php">
+    <InvalidNullableReturnType>
+      <code>string</code>
+    </InvalidNullableReturnType>
+    <NullableReturnStatement>
+      <code><![CDATA[preg_replace("{^[{$char_mask}]++}uD", '', $string)]]></code>
+    </NullableReturnStatement>
+  </file>
+  <file src="../src/Psl/Str/trim_right.php">
+    <InvalidNullableReturnType>
+      <code>string</code>
+    </InvalidNullableReturnType>
+    <NullableReturnStatement>
+      <code><![CDATA[preg_replace("{[{$char_mask}]++$}uD", '', $string)]]></code>
+    </NullableReturnStatement>
   </file>
   <file src="../src/Psl/Vec/reverse.php">
     <TypeDoesNotContainType>
