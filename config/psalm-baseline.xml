@@ -51,6 +51,11 @@
       <code>string</code>
     </InvalidFalsableReturnType>
   </file>
+  <file src="../src/Psl/Network/Internal/socket_connect.php">
+    <PossiblyInvalidArgument>
+      <code>$socket</code>
+    </PossiblyInvalidArgument>
+  </file>
   <file src="../src/Psl/Shell/stream_unpack.php">
     <PossiblyInvalidArrayAccess>
       <code><![CDATA[$headers['size']]]></code>
