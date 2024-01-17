@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.x-dev@5acde045f126440ded206b406cf37b649ede84fc">
+<files psalm-version="dev-master@a3a13241a76d19e7e7f0f51bef973f8c9266d594">
+  <file src="../src/Psl/Async/Scheduler.php">
+    <MissingThrowsDocblock>
+      <code>run</code>
+    </MissingThrowsDocblock>
+  </file>
   <file src="../src/Psl/Collection/MutableVector.php">
     <InvalidReturnStatement>
       <code><![CDATA[Iter\Iterator::create($this->elements)]]></code>
@@ -19,6 +24,11 @@
       <code><![CDATA[Iter\Iterator<int, T>]]></code>
       <code><![CDATA[Vector<int>]]></code>
     </InvalidReturnType>
+  </file>
+  <file src="../src/Psl/Filesystem/canonicalize.php">
+    <RiskyTruthyFalsyComparison>
+      <code>realpath($path)</code>
+    </RiskyTruthyFalsyComparison>
   </file>
   <file src="../src/Psl/Filesystem/create_temporary_file.php">
     <ArgumentTypeCoercion>
@@ -40,41 +50,20 @@
       <code>non-empty-string</code>
     </MoreSpecificReturnType>
   </file>
-  <file src="../src/Psl/Internal/box.php">
-    <UnnecessaryVarAnnotation>
-      <code>string|null</code>
-    </UnnecessaryVarAnnotation>
-  </file>
   <file src="../src/Psl/Iter/random.php">
     <TypeDoesNotContainType>
       <code>$size === 0</code>
     </TypeDoesNotContainType>
   </file>
-  <file src="../src/Psl/Network/Internal/get_peer_name.php">
-    <UnnecessaryVarAnnotation>
-      <code>string|false</code>
-    </UnnecessaryVarAnnotation>
-  </file>
-  <file src="../src/Psl/Network/Internal/get_sock_name.php">
-    <UnnecessaryVarAnnotation>
-      <code>string|false</code>
-    </UnnecessaryVarAnnotation>
-  </file>
   <file src="../src/Psl/Network/Internal/socket_connect.php">
     <PossiblyInvalidArgument>
       <code>$socket</code>
     </PossiblyInvalidArgument>
-    <UnnecessaryVarAnnotation>
-      <code>string</code>
-    </UnnecessaryVarAnnotation>
   </file>
-  <file src="../src/Psl/Shell/execute.php">
-    <UnnecessaryVarAnnotation>
-      <code><![CDATA[array<string, string>]]></code>
-      <code><![CDATA[array<string, string>]]></code>
-      <code><![CDATA[array<string, string>]]></code>
-      <code>int</code>
-    </UnnecessaryVarAnnotation>
+  <file src="../src/Psl/Str/detect_encoding.php">
+    <RiskyTruthyFalsyComparison>
+      <code>mb_detect_encoding($string, $encoding_list, true)</code>
+    </RiskyTruthyFalsyComparison>
   </file>
   <file src="../src/Psl/Vec/reverse.php">
     <TypeDoesNotContainType>
