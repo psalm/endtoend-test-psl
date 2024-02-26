@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="dev-master@a3a13241a76d19e7e7f0f51bef973f8c9266d594">
+<files psalm-version="5.x-dev@ceaea625f30289850c8a9274b9c79e21fa848dea">
   <file src="../src/Psl/Async/Scheduler.php">
     <MissingThrowsDocblock>
-      <code>run</code>
+      <code><![CDATA[run]]></code>
     </MissingThrowsDocblock>
+  </file>
+  <file src="../src/Psl/Async/all.php">
+    <InvalidIterator>
+      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
+    </InvalidIterator>
+  </file>
+  <file src="../src/Psl/Async/any.php">
+    <InvalidIterator>
+      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
+    </InvalidIterator>
+  </file>
+  <file src="../src/Psl/Async/first.php">
+    <InvalidIterator>
+      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
+    </InvalidIterator>
   </file>
   <file src="../src/Psl/Collection/MutableVector.php">
     <InvalidReturnStatement>
@@ -27,47 +42,32 @@
   </file>
   <file src="../src/Psl/Filesystem/canonicalize.php">
     <RiskyTruthyFalsyComparison>
-      <code>realpath($path)</code>
+      <code><![CDATA[realpath($path)]]></code>
     </RiskyTruthyFalsyComparison>
-  </file>
-  <file src="../src/Psl/Filesystem/create_temporary_file.php">
-    <ArgumentTypeCoercion>
-      <code>$filename</code>
-    </ArgumentTypeCoercion>
-    <LessSpecificReturnStatement>
-      <code>$filename</code>
-    </LessSpecificReturnStatement>
-    <MixedArgument>
-      <code>$separator</code>
-    </MixedArgument>
-    <MixedAssignment>
-      <code>$separator</code>
-    </MixedAssignment>
-    <MixedOperand>
-      <code>$separator</code>
-    </MixedOperand>
-    <MoreSpecificReturnType>
-      <code>non-empty-string</code>
-    </MoreSpecificReturnType>
   </file>
   <file src="../src/Psl/Iter/random.php">
     <TypeDoesNotContainType>
-      <code>$size === 0</code>
+      <code><![CDATA[$size === 0]]></code>
     </TypeDoesNotContainType>
   </file>
   <file src="../src/Psl/Network/Internal/socket_connect.php">
     <PossiblyInvalidArgument>
-      <code>$socket</code>
+      <code><![CDATA[$socket]]></code>
     </PossiblyInvalidArgument>
+  </file>
+  <file src="../src/Psl/Shell/unpack.php">
+    <InvalidIterator>
+      <code><![CDATA[stream_unpack($content)]]></code>
+    </InvalidIterator>
   </file>
   <file src="../src/Psl/Str/detect_encoding.php">
     <RiskyTruthyFalsyComparison>
-      <code>mb_detect_encoding($string, $encoding_list, true)</code>
+      <code><![CDATA[mb_detect_encoding($string, $encoding_list, true)]]></code>
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="../src/Psl/Vec/reverse.php">
     <TypeDoesNotContainType>
-      <code>0 === $size</code>
+      <code><![CDATA[0 === $size]]></code>
     </TypeDoesNotContainType>
   </file>
 </files>
