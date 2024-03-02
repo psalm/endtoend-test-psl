@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="dev-master@950293c6e74c6e9db842f537c5722755b1594313">
+<files psalm-version="dev-master@c4055cf0d03d9df471fc6761e732550c633088c1">
   <file src="../src/Psl/Async/KeyedSemaphore.php">
     <PossiblyNullReference>
-      <code>resume</code>
+      <code><![CDATA[resume]]></code>
     </PossiblyNullReference>
   </file>
   <file src="../src/Psl/Async/Scheduler.php">
     <MissingThrowsDocblock>
-      <code>run</code>
+      <code><![CDATA[run]]></code>
     </MissingThrowsDocblock>
+  </file>
+  <file src="../src/Psl/Async/all.php">
+    <InvalidIterator>
+      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
+    </InvalidIterator>
+  </file>
+  <file src="../src/Psl/Async/any.php">
+    <InvalidIterator>
+      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
+    </InvalidIterator>
+  </file>
+  <file src="../src/Psl/Async/first.php">
+    <InvalidIterator>
+      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
+    </InvalidIterator>
   </file>
   <file src="../src/Psl/Collection/MutableVector.php">
     <InvalidReturnStatement>
@@ -32,15 +47,15 @@
   </file>
   <file src="../src/Psl/Encoding/Hex/decode.php">
     <FalsableReturnStatement>
-      <code>hex2bin($hexadecimal)</code>
+      <code><![CDATA[hex2bin($hexadecimal)]]></code>
     </FalsableReturnStatement>
     <InvalidFalsableReturnType>
-      <code>string</code>
+      <code><![CDATA[string]]></code>
     </InvalidFalsableReturnType>
   </file>
   <file src="../src/Psl/Filesystem/canonicalize.php">
     <RiskyTruthyFalsyComparison>
-      <code>realpath($path)</code>
+      <code><![CDATA[realpath($path)]]></code>
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="../src/Psl/IO/ReadHandleConvenienceMethodsTrait.php">
@@ -93,20 +108,20 @@
   </file>
   <file src="../src/Psl/Iter/random.php">
     <TypeDoesNotContainType>
-      <code>$size === 0</code>
+      <code><![CDATA[$size === 0]]></code>
     </TypeDoesNotContainType>
   </file>
   <file src="../src/Psl/Json/encode.php">
     <FalsableReturnStatement>
-      <code>$json</code>
+      <code><![CDATA[$json]]></code>
     </FalsableReturnStatement>
     <InvalidFalsableReturnType>
-      <code>string</code>
+      <code><![CDATA[string]]></code>
     </InvalidFalsableReturnType>
   </file>
   <file src="../src/Psl/Network/Internal/socket_connect.php">
     <PossiblyInvalidArgument>
-      <code>$socket</code>
+      <code><![CDATA[$socket]]></code>
     </PossiblyInvalidArgument>
   </file>
   <file src="../src/Psl/Shell/stream_unpack.php">
@@ -115,17 +130,22 @@
       <code><![CDATA[$headers['type']]]></code>
     </PossiblyInvalidArrayAccess>
   </file>
+  <file src="../src/Psl/Shell/unpack.php">
+    <InvalidIterator>
+      <code><![CDATA[stream_unpack($content)]]></code>
+    </InvalidIterator>
+  </file>
   <file src="../src/Psl/Str/convert_encoding.php">
     <FalsableReturnStatement>
       <code><![CDATA[mb_convert_encoding($string, $to_encoding->value, $from_encoding->value)]]></code>
     </FalsableReturnStatement>
     <InvalidFalsableReturnType>
-      <code>string</code>
+      <code><![CDATA[string]]></code>
     </InvalidFalsableReturnType>
   </file>
   <file src="../src/Psl/Str/detect_encoding.php">
     <RiskyTruthyFalsyComparison>
-      <code>mb_detect_encoding($string, $encoding_list, true)</code>
+      <code><![CDATA[mb_detect_encoding($string, $encoding_list, true)]]></code>
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="../src/Psl/Str/ord.php">
@@ -133,7 +153,7 @@
       <code><![CDATA[mb_ord($character, $encoding->value)]]></code>
     </FalsableReturnStatement>
     <InvalidFalsableReturnType>
-      <code>int</code>
+      <code><![CDATA[int]]></code>
     </InvalidFalsableReturnType>
   </file>
   <file src="../src/Psl/Str/replace_ci.php">
@@ -143,7 +163,7 @@
   </file>
   <file src="../src/Psl/Str/trim.php">
     <InvalidNullableReturnType>
-      <code>string</code>
+      <code><![CDATA[string]]></code>
     </InvalidNullableReturnType>
     <NullableReturnStatement>
       <code><![CDATA[preg_replace("{^[{$char_mask}]++|[{$char_mask}]++$}uD", '', $string)]]></code>
@@ -151,7 +171,7 @@
   </file>
   <file src="../src/Psl/Str/trim_left.php">
     <InvalidNullableReturnType>
-      <code>string</code>
+      <code><![CDATA[string]]></code>
     </InvalidNullableReturnType>
     <NullableReturnStatement>
       <code><![CDATA[preg_replace("{^[{$char_mask}]++}uD", '', $string)]]></code>
@@ -159,7 +179,7 @@
   </file>
   <file src="../src/Psl/Str/trim_right.php">
     <InvalidNullableReturnType>
-      <code>string</code>
+      <code><![CDATA[string]]></code>
     </InvalidNullableReturnType>
     <NullableReturnStatement>
       <code><![CDATA[preg_replace("{[{$char_mask}]++$}uD", '', $string)]]></code>
@@ -167,7 +187,7 @@
   </file>
   <file src="../src/Psl/Vec/reverse.php">
     <TypeDoesNotContainType>
-      <code>0 === $size</code>
+      <code><![CDATA[0 === $size]]></code>
     </TypeDoesNotContainType>
   </file>
 </files>
