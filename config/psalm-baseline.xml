@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="dev-master@c4055cf0d03d9df471fc6761e732550c633088c1">
+<files psalm-version="dev-master@e9e270f363bd05ea3790890de3f04f6726ea5643">
   <file src="../src/Psl/Async/KeyedSemaphore.php">
     <PossiblyNullReference>
       <code><![CDATA[resume]]></code>
@@ -57,54 +57,6 @@
     <RiskyTruthyFalsyComparison>
       <code><![CDATA[realpath($path)]]></code>
     </RiskyTruthyFalsyComparison>
-  </file>
-  <file src="../src/Psl/IO/ReadHandleConvenienceMethodsTrait.php">
-    <MixedArgument>
-      <code><![CDATA[Str\format(
-                    "Reached timeout before %s data could be read.",
-                    ($data->value === '') ? 'any' : 'all',
-                )]]></code>
-      <code><![CDATA[Str\format(
-                "%d bytes were requested, but only able to read %d bytes",
-                $size,
-                $length,
-            )]]></code>
-    </MixedArgument>
-    <UndefinedFunction>
-      <code><![CDATA[Str\format(
-                    "Reached timeout before %s data could be read.",
-                    ($data->value === '') ? 'any' : 'all',
-                )]]></code>
-      <code><![CDATA[Str\format(
-                "%d bytes were requested, but only able to read %d bytes",
-                $size,
-                $length,
-            )]]></code>
-    </UndefinedFunction>
-  </file>
-  <file src="../src/Psl/IO/WriteHandleConvenienceMethodsTrait.php">
-    <MixedArgument>
-      <code><![CDATA[Str\format(
-                    "Reached timeout before %s data could be written.",
-                    ($written->value === 0) ? 'any' : 'all',
-                )]]></code>
-      <code><![CDATA[Str\format(
-                "asked to write %d bytes, but only able to write %d bytes",
-                $original_size,
-                $original_size - strlen($bytes),
-            )]]></code>
-    </MixedArgument>
-    <UndefinedFunction>
-      <code><![CDATA[Str\format(
-                    "Reached timeout before %s data could be written.",
-                    ($written->value === 0) ? 'any' : 'all',
-                )]]></code>
-      <code><![CDATA[Str\format(
-                "asked to write %d bytes, but only able to write %d bytes",
-                $original_size,
-                $original_size - strlen($bytes),
-            )]]></code>
-    </UndefinedFunction>
   </file>
   <file src="../src/Psl/Iter/random.php">
     <TypeDoesNotContainType>
