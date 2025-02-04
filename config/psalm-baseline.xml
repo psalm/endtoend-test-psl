@@ -10,21 +10,6 @@
       <code><![CDATA[run]]></code>
     </MissingThrowsDocblock>
   </file>
-  <file src="../src/Psl/Async/all.php">
-    <InvalidIterator>
-      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
-    </InvalidIterator>
-  </file>
-  <file src="../src/Psl/Async/any.php">
-    <InvalidIterator>
-      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
-    </InvalidIterator>
-  </file>
-  <file src="../src/Psl/Async/first.php">
-    <InvalidIterator>
-      <code><![CDATA[Awaitable::iterate($awaitables)]]></code>
-    </InvalidIterator>
-  </file>
   <file src="../src/Psl/Collection/MutableVector.php">
     <InvalidReturnStatement>
       <code><![CDATA[Iter\Iterator::create($this->elements)]]></code>
@@ -81,11 +66,6 @@
       <code><![CDATA[$headers['size']]]></code>
       <code><![CDATA[$headers['type']]]></code>
     </PossiblyInvalidArrayAccess>
-  </file>
-  <file src="../src/Psl/Shell/unpack.php">
-    <InvalidIterator>
-      <code><![CDATA[stream_unpack($content)]]></code>
-    </InvalidIterator>
   </file>
   <file src="../src/Psl/Str/convert_encoding.php">
     <FalsableReturnStatement>
