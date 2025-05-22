@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="dev-master@e9e270f363bd05ea3790890de3f04f6726ea5643">
+<files psalm-version="dev-master@1359b59ac1b1df71151410b2461f5341d9943a00">
+  <file src="../src/Psl/Async/Awaitable.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function always(Closure $always): Awaitable]]></code>
+      <code><![CDATA[public function catch(Closure $failure): Awaitable]]></code>
+      <code><![CDATA[public function map(Closure $success): Awaitable]]></code>
+      <code><![CDATA[public function then(Closure $success, Closure $failure): Awaitable]]></code>
+    </MissingOverrideAttribute>
+  </file>
   <file src="../src/Psl/Async/KeyedSemaphore.php">
     <PossiblyNullReference>
       <code><![CDATA[resume]]></code>
@@ -10,6 +18,226 @@
       <code><![CDATA[run]]></code>
     </MissingThrowsDocblock>
   </file>
+  <file src="../src/Psl/Channel/ChannelInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Channel/Internal/BoundedChannelState.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function getCapacity(): int]]></code>
+      <code><![CDATA[public function isClosed(): bool]]></code>
+      <code><![CDATA[public function isEmpty(): bool]]></code>
+      <code><![CDATA[public function isFull(): bool]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Channel/Internal/BoundedReceiver.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function receive(): mixed]]></code>
+      <code><![CDATA[public function tryReceive(): mixed]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Channel/Internal/BoundedSender.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function send(mixed $message): void]]></code>
+      <code><![CDATA[public function trySend(mixed $message): void]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Channel/Internal/UnboundedChannelState.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function getCapacity(): ?int]]></code>
+      <code><![CDATA[public function isClosed(): bool]]></code>
+      <code><![CDATA[public function isEmpty(): bool]]></code>
+      <code><![CDATA[public function isFull(): bool]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Channel/Internal/UnboundedReceiver.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function receive(): mixed]]></code>
+      <code><![CDATA[public function tryReceive(): mixed]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Channel/Internal/UnboundedSender.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function send(mixed $message): void]]></code>
+      <code><![CDATA[public function trySend(mixed $message): void]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/AccessibleCollectionInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function chunk(int $size): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function drop(int $n): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function filter(Closure $fn): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function map(Closure $fn): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function take(int $n): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): AccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function zip(array $elements): AccessibleCollectionInterface;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/CollectionInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int;]]></code>
+      <code><![CDATA[public function jsonSerialize(): array;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/Map.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function at(string|int $k): mixed]]></code>
+      <code><![CDATA[public function chunk(int $size): Vector]]></code>
+      <code><![CDATA[public function contains(int|string $k): bool]]></code>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function drop(int $n): Map]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): Map]]></code>
+      <code><![CDATA[public function filter(Closure $fn): Map]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): Map]]></code>
+      <code><![CDATA[public function first(): mixed]]></code>
+      <code><![CDATA[public function firstKey(): int|string|null]]></code>
+      <code><![CDATA[public function get(string|int $k): mixed]]></code>
+      <code><![CDATA[public function getIterator(): Iter\Iterator]]></code>
+      <code><![CDATA[public function isEmpty(): bool]]></code>
+      <code><![CDATA[public function jsonSerialize(): array]]></code>
+      <code><![CDATA[public function keys(): Vector]]></code>
+      <code><![CDATA[public function last(): mixed]]></code>
+      <code><![CDATA[public function lastKey(): int|string|null]]></code>
+      <code><![CDATA[public function linearSearch(mixed $search_value): int|string|null]]></code>
+      <code><![CDATA[public function map(Closure $fn): Map]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): Map]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): Map]]></code>
+      <code><![CDATA[public function take(int $n): Map]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): Map]]></code>
+      <code><![CDATA[public function toArray(): array]]></code>
+      <code><![CDATA[public function values(): Vector]]></code>
+      <code><![CDATA[public function zip(array $elements): Map]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/MapInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function chunk(int $size): VectorInterface;]]></code>
+      <code><![CDATA[public function drop(int $n): MapInterface;]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): MapInterface;]]></code>
+      <code><![CDATA[public function filter(Closure $fn): MapInterface;]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): MapInterface;]]></code>
+      <code><![CDATA[public function first(): mixed;]]></code>
+      <code><![CDATA[public function firstKey(): int|string|null;]]></code>
+      <code><![CDATA[public function keys(): VectorInterface;]]></code>
+      <code><![CDATA[public function last(): mixed;]]></code>
+      <code><![CDATA[public function lastKey(): int|string|null;]]></code>
+      <code><![CDATA[public function linearSearch(mixed $search_value): int|string|null;]]></code>
+      <code><![CDATA[public function map(Closure $fn): MapInterface;]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): MapInterface;]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): MapInterface;]]></code>
+      <code><![CDATA[public function take(int $n): MapInterface;]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): MapInterface;]]></code>
+      <code><![CDATA[public function values(): VectorInterface;]]></code>
+      <code><![CDATA[public function zip(array $elements): MapInterface;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/MutableAccessibleCollectionInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function chunk(int $size): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function clear(): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function drop(int $n): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function filter(Closure $fn): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function keys(): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function map(Closure $fn): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function remove(int|string $k): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function set(int|string $k, mixed $v): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function setAll(array $elements): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function take(int $n): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function values(): MutableAccessibleCollectionInterface;]]></code>
+      <code><![CDATA[public function zip(array $elements): MutableAccessibleCollectionInterface;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/MutableCollectionInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function chunk(int $size): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function drop(int $n): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function filter(Closure $fn): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function map(Closure $fn): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function take(int $n): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): MutableCollectionInterface;]]></code>
+      <code><![CDATA[public function zip(array $elements): MutableCollectionInterface;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/MutableMap.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function add(int|string $k, mixed $v): MutableMap]]></code>
+      <code><![CDATA[public function addAll(array $elements): MutableMap]]></code>
+      <code><![CDATA[public function at(string|int $k): mixed]]></code>
+      <code><![CDATA[public function chunk(int $size): MutableVector]]></code>
+      <code><![CDATA[public function clear(): MutableMap]]></code>
+      <code><![CDATA[public function contains(int|string $k): bool]]></code>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function drop(int $n): MutableMap]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): MutableMap]]></code>
+      <code><![CDATA[public function filter(Closure $fn): MutableMap]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): MutableMap]]></code>
+      <code><![CDATA[public function first(): mixed]]></code>
+      <code><![CDATA[public function firstKey(): int|string|null]]></code>
+      <code><![CDATA[public function get(string|int $k): mixed]]></code>
+      <code><![CDATA[public function getIterator(): Iter\Iterator]]></code>
+      <code><![CDATA[public function isEmpty(): bool]]></code>
+      <code><![CDATA[public function jsonSerialize(): array]]></code>
+      <code><![CDATA[public function keys(): MutableVector]]></code>
+      <code><![CDATA[public function last(): mixed]]></code>
+      <code><![CDATA[public function lastKey(): int|string|null]]></code>
+      <code><![CDATA[public function linearSearch(mixed $search_value): int|string|null]]></code>
+      <code><![CDATA[public function map(Closure $fn): MutableMap]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): MutableMap]]></code>
+      <code><![CDATA[public function remove(int|string $k): MutableMap]]></code>
+      <code><![CDATA[public function set(int|string $k, mixed $v): MutableMap]]></code>
+      <code><![CDATA[public function setAll(array $elements): MutableMap]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): MutableMap]]></code>
+      <code><![CDATA[public function take(int $n): MutableMap]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): MutableMap]]></code>
+      <code><![CDATA[public function toArray(): array]]></code>
+      <code><![CDATA[public function values(): MutableVector]]></code>
+      <code><![CDATA[public function zip(array $elements): MutableMap]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/MutableMapInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function chunk(int $size): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function clear(): MutableMapInterface;]]></code>
+      <code><![CDATA[public function drop(int $n): MutableMapInterface;]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): MutableMapInterface;]]></code>
+      <code><![CDATA[public function filter(Closure $fn): MutableMapInterface;]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): MutableMapInterface;]]></code>
+      <code><![CDATA[public function first(): mixed;]]></code>
+      <code><![CDATA[public function firstKey(): int|string|null;]]></code>
+      <code><![CDATA[public function keys(): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function last(): mixed;]]></code>
+      <code><![CDATA[public function lastKey(): int|string|null;]]></code>
+      <code><![CDATA[public function linearSearch(mixed $search_value): int|string|null;]]></code>
+      <code><![CDATA[public function map(Closure $fn): MutableMapInterface;]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): MutableMapInterface;]]></code>
+      <code><![CDATA[public function remove(int|string $k): MutableMapInterface;]]></code>
+      <code><![CDATA[public function set(int|string $k, mixed $v): MutableMapInterface;]]></code>
+      <code><![CDATA[public function setAll(array $elements): MutableMapInterface;]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): MutableMapInterface;]]></code>
+      <code><![CDATA[public function take(int $n): MutableMapInterface;]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): MutableMapInterface;]]></code>
+      <code><![CDATA[public function values(): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function zip(array $elements): MutableMapInterface;]]></code>
+    </MissingOverrideAttribute>
+  </file>
   <file src="../src/Psl/Collection/MutableVector.php">
     <InvalidReturnStatement>
       <code><![CDATA[Iter\Iterator::create($this->elements)]]></code>
@@ -19,6 +247,67 @@
       <code><![CDATA[Iter\Iterator<int, T>]]></code>
       <code><![CDATA[MutableVector<int>]]></code>
     </InvalidReturnType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function add(mixed $v): MutableVector]]></code>
+      <code><![CDATA[public function addAll(array $elements): MutableVector]]></code>
+      <code><![CDATA[public function at(string|int $k): mixed]]></code>
+      <code><![CDATA[public function chunk(int $size): MutableVector]]></code>
+      <code><![CDATA[public function clear(): MutableVector]]></code>
+      <code><![CDATA[public function contains(int|string $k): bool]]></code>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function drop(int $n): MutableVector]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): MutableVector]]></code>
+      <code><![CDATA[public function filter(Closure $fn): MutableVector]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): MutableVector]]></code>
+      <code><![CDATA[public function first(): mixed]]></code>
+      <code><![CDATA[public function firstKey(): ?int]]></code>
+      <code><![CDATA[public function get(string|int $k): mixed]]></code>
+      <code><![CDATA[public function getIterator(): Iter\Iterator]]></code>
+      <code><![CDATA[public function isEmpty(): bool]]></code>
+      <code><![CDATA[public function jsonSerialize(): array]]></code>
+      <code><![CDATA[public function keys(): MutableVector]]></code>
+      <code><![CDATA[public function last(): mixed]]></code>
+      <code><![CDATA[public function lastKey(): ?int]]></code>
+      <code><![CDATA[public function linearSearch(mixed $search_value): ?int]]></code>
+      <code><![CDATA[public function map(Closure $fn): MutableVector]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): MutableVector]]></code>
+      <code><![CDATA[public function remove(int|string $k): MutableVector]]></code>
+      <code><![CDATA[public function set(int|string $k, mixed $v): MutableVector]]></code>
+      <code><![CDATA[public function setAll(array $elements): MutableVector]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): MutableVector]]></code>
+      <code><![CDATA[public function take(int $n): MutableVector]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): MutableVector]]></code>
+      <code><![CDATA[public function toArray(): array]]></code>
+      <code><![CDATA[public function values(): MutableVector]]></code>
+      <code><![CDATA[public function zip(array $elements): MutableVector]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/MutableVectorInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function chunk(int $size): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function clear(): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function drop(int $n): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function filter(Closure $fn): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function first(): mixed;]]></code>
+      <code><![CDATA[public function firstKey(): ?int;]]></code>
+      <code><![CDATA[public function keys(): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function last(): mixed;]]></code>
+      <code><![CDATA[public function lastKey(): ?int;]]></code>
+      <code><![CDATA[public function linearSearch(mixed $search_value): ?int;]]></code>
+      <code><![CDATA[public function map(Closure $fn): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function remove(int|string $k): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function set(int|string $k, mixed $v): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function setAll(array $elements): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function take(int $n): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function toArray(): array;]]></code>
+      <code><![CDATA[public function values(): MutableVectorInterface;]]></code>
+      <code><![CDATA[public function zip(array $elements): MutableVectorInterface;]]></code>
+    </MissingOverrideAttribute>
   </file>
   <file src="../src/Psl/Collection/Vector.php">
     <InvalidReturnStatement>
@@ -29,6 +318,102 @@
       <code><![CDATA[Iter\Iterator<int, T>]]></code>
       <code><![CDATA[Vector<int>]]></code>
     </InvalidReturnType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function at(string|int $k): mixed]]></code>
+      <code><![CDATA[public function chunk(int $size): Vector]]></code>
+      <code><![CDATA[public function contains(int|string $k): bool]]></code>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function drop(int $n): Vector]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): Vector]]></code>
+      <code><![CDATA[public function filter(Closure $fn): Vector]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): Vector]]></code>
+      <code><![CDATA[public function first(): mixed]]></code>
+      <code><![CDATA[public function firstKey(): ?int]]></code>
+      <code><![CDATA[public function get(string|int $k): mixed]]></code>
+      <code><![CDATA[public function getIterator(): Iter\Iterator]]></code>
+      <code><![CDATA[public function isEmpty(): bool]]></code>
+      <code><![CDATA[public function jsonSerialize(): array]]></code>
+      <code><![CDATA[public function keys(): Vector]]></code>
+      <code><![CDATA[public function last(): mixed]]></code>
+      <code><![CDATA[public function lastKey(): ?int]]></code>
+      <code><![CDATA[public function linearSearch(mixed $search_value): ?int]]></code>
+      <code><![CDATA[public function map(Closure $fn): Vector]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): Vector]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): Vector]]></code>
+      <code><![CDATA[public function take(int $n): Vector]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): Vector]]></code>
+      <code><![CDATA[public function toArray(): array]]></code>
+      <code><![CDATA[public function values(): Vector]]></code>
+      <code><![CDATA[public function zip(array $elements): Vector]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Collection/VectorInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function at(string|int $k): mixed;]]></code>
+      <code><![CDATA[public function chunk(int $size): VectorInterface;]]></code>
+      <code><![CDATA[public function contains(int|string $k): bool;]]></code>
+      <code><![CDATA[public function drop(int $n): VectorInterface;]]></code>
+      <code><![CDATA[public function dropWhile(Closure $fn): VectorInterface;]]></code>
+      <code><![CDATA[public function filter(Closure $fn): VectorInterface;]]></code>
+      <code><![CDATA[public function filterWithKey(Closure $fn): VectorInterface;]]></code>
+      <code><![CDATA[public function first(): mixed;]]></code>
+      <code><![CDATA[public function firstKey(): ?int;]]></code>
+      <code><![CDATA[public function get(string|int $k): mixed;]]></code>
+      <code><![CDATA[public function keys(): VectorInterface;]]></code>
+      <code><![CDATA[public function last(): mixed;]]></code>
+      <code><![CDATA[public function lastKey(): ?int;]]></code>
+      <code><![CDATA[public function linearSearch(mixed $search_value): ?int;]]></code>
+      <code><![CDATA[public function map(Closure $fn): VectorInterface;]]></code>
+      <code><![CDATA[public function mapWithKey(Closure $fn): VectorInterface;]]></code>
+      <code><![CDATA[public function slice(int $start, ?int $length = null): VectorInterface;]]></code>
+      <code><![CDATA[public function take(int $n): VectorInterface;]]></code>
+      <code><![CDATA[public function takeWhile(Closure $fn): VectorInterface;]]></code>
+      <code><![CDATA[public function toArray(): array;]]></code>
+      <code><![CDATA[public function values(): VectorInterface;]]></code>
+      <code><![CDATA[public function zip(array $elements): VectorInterface;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/DataStructure/PriorityQueue.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function dequeue(): mixed]]></code>
+      <code><![CDATA[public function enqueue(mixed $node, int $priority = 0): void]]></code>
+      <code><![CDATA[public function peek(): mixed]]></code>
+      <code><![CDATA[public function pull(): mixed]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/DataStructure/PriorityQueueInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function enqueue(mixed $node, int $priority = 0): void;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/DataStructure/Queue.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function dequeue(): mixed]]></code>
+      <code><![CDATA[public function enqueue(mixed $node): void]]></code>
+      <code><![CDATA[public function peek(): mixed]]></code>
+      <code><![CDATA[public function pull(): mixed]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/DataStructure/QueueInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/DataStructure/Stack.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function peek(): mixed]]></code>
+      <code><![CDATA[public function pop(): mixed]]></code>
+      <code><![CDATA[public function pull(): mixed]]></code>
+      <code><![CDATA[public function push(mixed $item): void]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/DataStructure/StackInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int;]]></code>
+    </MissingOverrideAttribute>
   </file>
   <file src="../src/Psl/Encoding/Hex/decode.php">
     <FalsableReturnStatement>
@@ -38,10 +423,227 @@
       <code><![CDATA[string]]></code>
     </InvalidFalsableReturnType>
   </file>
+  <file src="../src/Psl/File/Internal/AbstractHandleWrapper.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getPath(): string]]></code>
+      <code><![CDATA[public function getSize(): int]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function lock(LockType $type): Lock]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryLock(LockType $type): Lock]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/File/Internal/ResourceHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getPath(): string]]></code>
+      <code><![CDATA[public function getSize(): int]]></code>
+      <code><![CDATA[public function lock(LockType $type): Lock]]></code>
+      <code><![CDATA[public function tryLock(LockType $type): Lock]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/File/ReadHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/File/ReadWriteHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/File/WriteHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
   <file src="../src/Psl/Filesystem/canonicalize.php">
     <RiskyTruthyFalsyComparison>
       <code><![CDATA[realpath($path)]]></code>
     </RiskyTruthyFalsyComparison>
+  </file>
+  <file src="../src/Psl/Hash/Exception/RuntimeException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RuntimeException]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="../src/Psl/IO/CloseReadStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/CloseReadWriteStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/CloseSeekReadStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/CloseSeekReadWriteStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/CloseSeekStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/CloseSeekWriteStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/CloseStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/CloseWriteStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/Internal/ResourceHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/MemoryHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes, ?float $timeout = null): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/ReadStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/ReadWriteStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/Reader.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function readFixedSize(int $size, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/SeekReadStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/SeekReadWriteStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/SeekStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/SeekWriteStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function seek(int $offset): void]]></code>
+      <code><![CDATA[public function tell(): int]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/IO/WriteStreamHandle.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Iter/Iterator.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function count(): int]]></code>
+      <code><![CDATA[public function current(): mixed]]></code>
+      <code><![CDATA[public function key(): mixed]]></code>
+      <code><![CDATA[public function next(): void]]></code>
+      <code><![CDATA[public function rewind(): void]]></code>
+      <code><![CDATA[public function seek(int $position): void]]></code>
+      <code><![CDATA[public function valid(): bool]]></code>
+    </MissingOverrideAttribute>
   </file>
   <file src="../src/Psl/Iter/random.php">
     <TypeDoesNotContainType>
@@ -56,10 +658,83 @@
       <code><![CDATA[string]]></code>
     </InvalidFalsableReturnType>
   </file>
+  <file src="../src/Psl/Network/Internal/AbstractStreamServer.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getLocalAddress(): Network\Address]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function incoming(): Generator]]></code>
+      <code><![CDATA[public function nextConnection(): Network\StreamSocketInterface]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Network/Internal/Socket.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void]]></code>
+      <code><![CDATA[public function getLocalAddress(): Address]]></code>
+      <code><![CDATA[public function getPeerAddress(): Address]]></code>
+      <code><![CDATA[public function getStream(): mixed]]></code>
+      <code><![CDATA[public function read(?int $max_bytes = null, ?float $timeout = null): string]]></code>
+      <code><![CDATA[public function tryRead(?int $max_bytes = null): string]]></code>
+      <code><![CDATA[public function tryWrite(string $bytes): int]]></code>
+      <code><![CDATA[public function write(string $bytes, ?float $timeout = null): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
   <file src="../src/Psl/Network/Internal/socket_connect.php">
     <PossiblyInvalidArgument>
       <code><![CDATA[$socket]]></code>
     </PossiblyInvalidArgument>
+  </file>
+  <file src="../src/Psl/Network/ServerInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function close(): void;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Network/StreamServerInterface.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function incoming(): Generator;]]></code>
+      <code><![CDATA[public function nextConnection(): StreamSocketInterface;]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/RandomSequence/MersenneTwisterPHPVariantSequence.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function twist(int $m, int $u, int $v): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/RandomSequence/MersenneTwisterSequence.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function twist(int $m, int $u, int $v): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/RandomSequence/SecureSequence.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function next(): int]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Result/Failure.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function always(Closure $always): ResultInterface]]></code>
+      <code><![CDATA[public function catch(Closure $failure): ResultInterface]]></code>
+      <code><![CDATA[public function getResult(): void]]></code>
+      <code><![CDATA[public function getThrowable(): Throwable]]></code>
+      <code><![CDATA[public function isFailed(): bool]]></code>
+      <code><![CDATA[public function isSucceeded(): bool]]></code>
+      <code><![CDATA[public function map(Closure $success): Failure]]></code>
+      <code><![CDATA[public function proceed(Closure $success, Closure $failure): mixed]]></code>
+      <code><![CDATA[public function then(Closure $success, Closure $failure): ResultInterface]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Result/Success.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function always(Closure $always): ResultInterface]]></code>
+      <code><![CDATA[public function catch(Closure $failure): Success]]></code>
+      <code><![CDATA[public function getResult(): mixed]]></code>
+      <code><![CDATA[public function getThrowable(): never]]></code>
+      <code><![CDATA[public function isFailed(): bool]]></code>
+      <code><![CDATA[public function isSucceeded(): bool]]></code>
+      <code><![CDATA[public function map(Closure $success): ResultInterface]]></code>
+      <code><![CDATA[public function proceed(Closure $success, Closure $failure): mixed]]></code>
+      <code><![CDATA[public function then(Closure $success, Closure $failure): ResultInterface]]></code>
+    </MissingOverrideAttribute>
   </file>
   <file src="../src/Psl/Shell/stream_unpack.php">
     <PossiblyInvalidArrayAccess>
@@ -117,9 +792,318 @@
       <code><![CDATA[preg_replace("{[{$char_mask}]++$}uD", '', $string)]]></code>
     </NullableReturnStatement>
   </file>
+  <file src="../src/Psl/Type/Internal/ArrayKeyType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): mixed]]></code>
+      <code><![CDATA[public function coerce(mixed $value): mixed]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/BackedEnumType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): BackedEnum]]></code>
+      <code><![CDATA[public function coerce(mixed $value): BackedEnum]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/BoolType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): bool]]></code>
+      <code><![CDATA[public function coerce(mixed $value): bool]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/DictType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): array]]></code>
+      <code><![CDATA[public function coerce(mixed $value): array]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/FloatType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): float]]></code>
+      <code><![CDATA[public function coerce(mixed $value): float]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/InstanceOfType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): object]]></code>
+      <code><![CDATA[public function coerce(mixed $value): object]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/IntType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): int]]></code>
+      <code><![CDATA[public function coerce(mixed $value): int]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/IntersectionType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): mixed]]></code>
+      <code><![CDATA[public function coerce(mixed $value): mixed]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/IterableType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): iterable]]></code>
+      <code><![CDATA[public function coerce(mixed $value): iterable]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/LiteralScalarType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): string|int|float|bool]]></code>
+      <code><![CDATA[public function coerce(mixed $value): string|int|float|bool]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/MapType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): Collection\MapInterface]]></code>
+      <code><![CDATA[public function coerce(mixed $value): Collection\MapInterface]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/MixedDictType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): array]]></code>
+      <code><![CDATA[public function coerce(mixed $value): array]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/MixedType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): mixed]]></code>
+      <code><![CDATA[public function coerce(mixed $value): mixed]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/MixedVecType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): array]]></code>
+      <code><![CDATA[public function coerce(mixed $value): iterable]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/MutableMapType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): Collection\MutableMapInterface]]></code>
+      <code><![CDATA[public function coerce(mixed $value): Collection\MutableMapInterface]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/MutableVectorType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): Collection\MutableVectorInterface]]></code>
+      <code><![CDATA[public function coerce(mixed $value): Collection\MutableVectorInterface]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/NonEmptyDictType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): array]]></code>
+      <code><![CDATA[public function coerce(mixed $value): array]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/NonEmptyStringType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): string]]></code>
+      <code><![CDATA[public function coerce(mixed $value): string]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/NonEmptyVecType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): array]]></code>
+      <code><![CDATA[public function coerce(mixed $value): iterable]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/NullType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): mixed]]></code>
+      <code><![CDATA[public function coerce(mixed $value): mixed]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/NullableType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): mixed]]></code>
+      <code><![CDATA[public function coerce(mixed $value): mixed]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/NumType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/ObjectType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): object]]></code>
+      <code><![CDATA[public function coerce(mixed $value): object]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/OptionalType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): mixed]]></code>
+      <code><![CDATA[public function coerce(mixed $value): mixed]]></code>
+      <code><![CDATA[public function isOptional(): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/PositiveIntType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): int]]></code>
+      <code><![CDATA[public function coerce(mixed $value): int]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/ResourceType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): mixed]]></code>
+      <code><![CDATA[public function coerce(mixed $value): mixed]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/ScalarType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/ShapeType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): array]]></code>
+      <code><![CDATA[public function coerce(mixed $value): array]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/StringType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): string]]></code>
+      <code><![CDATA[public function coerce(mixed $value): string]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/UnionType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): mixed]]></code>
+      <code><![CDATA[public function coerce(mixed $value): mixed]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/UnitEnumType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): UnitEnum]]></code>
+      <code><![CDATA[public function coerce(mixed $value): UnitEnum]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/VecType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): array]]></code>
+      <code><![CDATA[public function coerce(mixed $value): iterable]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Internal/VectorType.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function assert(mixed $value): Collection\VectorInterface]]></code>
+      <code><![CDATA[public function coerce(mixed $value): Collection\VectorInterface]]></code>
+      <code><![CDATA[public function toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../src/Psl/Type/Type.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function isOptional(): bool]]></code>
+      <code><![CDATA[public function matches(mixed $value): bool]]></code>
+      <code><![CDATA[public function withTrace(TypeTrace $trace): TypeInterface]]></code>
+    </MissingOverrideAttribute>
+  </file>
   <file src="../src/Psl/Vec/reverse.php">
     <TypeDoesNotContainType>
       <code><![CDATA[0 === $size]]></code>
     </TypeDoesNotContainType>
+  </file>
+  <file src="../tests/benchmark/Type/ArrayKeyTypeBench.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function provideHappyPathAssertion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathCoercion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathMatches(): array]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../tests/benchmark/Type/Asset/ExplicitStringableObject.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __toString(): string]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../tests/benchmark/Type/DictTypeBench.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function provideHappyPathAssertion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathCoercion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathMatches(): array]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../tests/benchmark/Type/IntTypeBench.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function provideHappyPathAssertion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathCoercion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathMatches(): array]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../tests/benchmark/Type/NonEmptyStringTypeBench.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function provideHappyPathAssertion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathCoercion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathMatches(): array]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../tests/benchmark/Type/ShapeTypeBench.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function provideHappyPathAssertion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathCoercion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathMatches(): array]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../tests/benchmark/Type/StringTypeBench.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function provideHappyPathAssertion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathCoercion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathMatches(): array]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="../tests/benchmark/Type/VecTypeBench.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function provideHappyPathAssertion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathCoercion(): array]]></code>
+      <code><![CDATA[public function provideHappyPathMatches(): array]]></code>
+    </MissingOverrideAttribute>
   </file>
 </files>
